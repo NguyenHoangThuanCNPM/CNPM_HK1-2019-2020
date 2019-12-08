@@ -1,3 +1,9 @@
+/*
+* jQuery myCart - v1.0 - 2016-04-21
+* http://asraf-uddin-ahmed.github.io/
+* Copyright (c) 2016 Asraf Uddin Ahmed; Licensed None
+*/
+
 (function ($) {
 
   "use strict";
@@ -186,7 +192,7 @@
         '</div>' +
         '<div class="modal-footer">' +
         '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
-		
+
         '</div>' +
         '</div>' +
         '</div>' +
@@ -205,9 +211,9 @@
           '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
           '<td class="text-center" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
           '<td>' + this.name + '</td>' +
-          '<td title="Unit Price">VND ' + this.price + '</td>' +
+          '<td title="Unit Price">$' + this.price + '</td>' +
           '<td title="Quantity"><input type="number" min="1" style="width: 70px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
-          '<td title="Total" class="' + classProductTotal + '">VND ' + total + '</td>' +
+          '<td title="Total" class="' + classProductTotal + '">$' + total + '</td>' +
           '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
           '</tr>'
         );
@@ -253,10 +259,10 @@
       });
     }
     var showGrandTotal = function(){
-      $("#" + idGrandTotal).text(ProductManager.getTotalPrice() + " VND");
+      $("#" + idGrandTotal).text("$" + ProductManager.getTotalPrice());
     }
     var showDiscountPrice = function(){
-      $("#" + idDiscountPrice).text(options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity()) + " VND");
+      $("#" + idDiscountPrice).text("$" + options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity()));
     }
 
     /*
