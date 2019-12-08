@@ -185,5 +185,3 @@
   })(window.jQuery);
 
 }).call(this);
-
-//# sourceMappingURL=jquery.zoomtoo.js.map
