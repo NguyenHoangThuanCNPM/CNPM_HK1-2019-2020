@@ -185,7 +185,7 @@
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
-        '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
+        '<button type="button" class="btn btn-default"> <a href="login.html" style="text-decoration: none;">Payment</a> </button>' +
 		
         '</div>' +
         '</div>' +
